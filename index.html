@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio of Kooli Lodeya Samwel — Computer Scientist, Software Engineer, Graphic Designer, Web Designer and Video Editor Based in Turkana County, Kenya.">
+  <meta name="theme-color" content="#0756b5">
+  <title>Kooli Lodeya Samwel | Computer Scientist & Digital Creative</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <style>
+    :root {
+      --blue: #0756b5;
+      --blue-dark: #06438f;
+      --navy: #102d50;
+      --pale: #eaf3ff;
+      --background: #f6f9fe;
+      --white: #fff;
+      --text: #26374d;
+      --muted: #64748b;
+      --border: #dce7f4;
+      --shadow: 0 14px 35px rgba(16, 45, 80, .09);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 88%);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-alt {
+      background: var(--background);
+    }
+
+    .section-heading {
+      text-align: center;
+      margin: 0 auto 46px;
+      max-width: 680px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(1.8rem, 4vw, 2.35rem);
+      line-height: 1.2;
+    }
+
+    .section-heading h2 span {
+      color: var(--blue);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .76rem;
+      font-weight: 800;
+    }
+
+    /* Header and navigation */
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 1000;
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(145deg, var(--blue), var(--navy));
+      border-radius: 12px;
+      font-size: 1.05rem;
+      letter-spacing: -1px;
+      box-shadow: 0 7px 18px rgba(7, 86, 181, .2);
+    }
+
+    .brand-name {
+      font-size: .92rem;
+      line-height: 1.25;
+    }
+
+    .brand-name small {
+      display: block;
+      color: var(--muted);
+      font-size: .68rem;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: var(--navy);
+      font-size: .86rem;
+      font-weight: 650;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--blue);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--blue);
+      border-radius: 9px;
+      padding: 8px 11px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 760px;
+      padding: 145px 0 85px;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at 82% 23%, #e0edff 0, transparent 32%),
+        linear-gradient(120deg, #fff 5%, #f3f8ff 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 54px;
+    }
+
+    .hero h1 {
+      color: var(--navy);
+      font-size: clamp(2.7rem, 5.7vw, 4.7rem);
+      line-height: 1.08;
+      letter-spacing: -2.5px;
+      margin: 17px 0 16px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .tagline {
+      color: var(--blue);
+      font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+      font-weight: 750;
+      line-height: 1.35;
+      margin-bottom: 18px;
+    }
+
+    .hero-copy {
+      max-width: 620px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: 410px;
+      object-fit: cover;
+      border-radius: 22px;
+      border: 7px solid white;
+      box-shadow: var(--shadow);
+    }
+
+    .photo-label {
+      position: absolute;
+      left: -18px;
+      bottom: 22px;
+      background: white;
+      color: var(--navy);
+      padding: 13px 18px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      font-size: .82rem;
+      font-weight: 750;
+    }
+
+    .photo-label span {
+      display: block;
+      color: var(--muted);
+      font-size: .7rem;
+      font-weight: 500;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 21px;
+      border-radius: 8px;
+      font-weight: 750;
+      font-size: .9rem;
+      border: 1px solid transparent;
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 20px rgba(7, 86, 181, .16);
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+    }
+
+    .btn-outline {
+      color: var(--blue);
+      border-color: var(--blue);
+      background: white;
+    }
+
+    .btn-outline:hover {
+      background: var(--pale);
+    }
+
+    /* Technology logos */
+    .tech-strip {
+      padding: 34px 0 40px;
+      background: var(--background);
+      border-block: 1px solid var(--border);
+    }
+
+    .tech-strip h2 {
+      color: var(--navy);
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .tech-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .tech-item {
+      min-width: 68px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 650;
+    }
+
+    .tech-item i {
+      display: block;
+      font-size: 2.65rem;
+      margin-bottom: 6px;
+    }
+
+    .tech-item:hover {
+      color: var(--blue);
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: .78fr 1.4fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .initials-card {
+      min-height: 330px;
+      border-radius: 20px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(145deg, var(--blue), var(--navy));
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .initials-card::before,
+    .initials-card::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 50%;
+      width: 260px;
+      height: 260px;
+    }
+
+    .initials-card::after {
+      width: 350px;
+      height: 350px;
+    }
+
+    .initials-card strong {
+      position: relative;
+      z-index: 1;
+      font-size: 5rem;
+      letter-spacing: -7px;
+    }
+
+    .about-copy h3 {
+      color: var(--navy);
+      font-size: 1.55rem;
+      margin-bottom: 16px;
+    }
+
+    .about-copy h3 span {
+      color: var(--blue);
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 20px;
+      margin-top: 22px;
+    }
+
+    .details div {
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .details strong {
+      color: var(--navy);
+    }
+
+    /* Skills and services */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 27px;
+      transition: transform .22s, box-shadow .22s, border-color .22s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #a9c9f1;
+      box-shadow: var(--shadow);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--pale);
+      font-size: 1.55rem;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .progress {
+      height: 7px;
+      background: #e7eef8;
+      border-radius: 20px;
+      margin-top: 18px;
+      overflow: hidden;
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--blue), #42a5ff);
+      border-radius: inherit;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      text-align: center;
+      padding: 25px 18px;
+    }
+
+    .service-card .card-icon {
+      margin-inline: auto;
+    }
+
+    /* Portfolio */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      padding: 15px;
+    }
+
+    .project-image {
+      height: 185px;
+      overflow: hidden;
+      border-radius: 11px;
+      margin-bottom: 17px;
+      background: var(--pale);
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.06);
+    }
+
+    .project-card h3 {
+      color: var(--navy);
+      margin-bottom: 7px;
+      font-size: 1rem;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    /* Contact */
+    .contact-panel {
+      max-width: 780px;
+      margin: auto;
+      text-align: center;
+      padding: 42px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--pale);
+    }
+
+    .contact-panel h3 {
+      color: var(--navy);
+      font-size: 1.55rem;
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+      margin: 12px 0 24px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-links a {
+      color: var(--blue);
+      font-weight: 750;
+      background: white;
+      border: 1px solid var(--border);
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    .contact-links a:hover {
+      border-color: var(--blue);
+    }
+
+    footer {
+      padding: 28px 15px;
+      text-align: center;
+      color: white;
+      background: var(--navy);
+    }
+
+    footer p {
+      font-size: .82rem;
+      opacity: .9;
+    }
+
+    footer p+p {
+      margin-top: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr .85fr;
+        gap: 30px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-photo {
+        height: 340px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        min-height: 70px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        padding: 20px 6%;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 125px 0 65px;
+      }
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo {
+        height: 290px;
+      }
+
+      .photo-label {
+        left: 10px;
+        bottom: 12px;
+      }
+
+      .initials-card {
+        min-height: 240px;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .details {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-panel {
+        padding: 28px 20px;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand-name {
+        font-size: .78rem;
+      }
+
+      .hero h1 {
+        font-size: 2.55rem;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tech-logos {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="KLS home">
+        <span class="brand-mark">KLS</span>
+        <span class="brand-name">KOOLI LODEYA SAMWEL<small>COMPUTER SCIENTIST</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Computer Scientist | Digital Creative</div>
+          <h1>Kooli Lodeya <span>Samwel</span></h1>
+          <div class="tagline">Innovating Through Technology and Creativity.</div>
+          <p class="hero-copy">
+            I am a Computer Scientist with interests and skills in Graphic Design,
+            Web Design, Video Editing and Software Engineering. I combine technical
+            thinking and creativity to build useful digital experiences and solutions.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#portfolio">Explore My Portfolio</a>
+            <a class="btn btn-outline" href="#contact">Get In Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <img class="hero-photo"
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85"
+            alt="Computer workstation with a laptop displaying software code">
+          <div class="photo-label">KLS <span>Technology • Design • Innovation</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tech-strip" aria-label="Technology tools">
+      <div class="container">
+        <h2>Technologies &amp; Tools</h2>
+        <div class="tech-logos">
+          <div class="tech-item"><i class="devicon-html5-plain colored" aria-hidden="true"></i>HTML5</div>
+          <div class="tech-item"><i class="devicon-css3-plain colored" aria-hidden="true"></i>CSS3</div>
+          <div class="tech-item"><i class="devicon-javascript-plain colored" aria-hidden="true"></i>JavaScript</div>
+          <div class="tech-item"><i class="devicon-python-plain colored" aria-hidden="true"></i>Python</div>
+          <div class="tech-item"><i class="devicon-cplusplus-plain colored" aria-hidden="true"></i>C++</div>
+          <div class="tech-item"><i class="devicon-php-plain colored" aria-hidden="true"></i>PHP</div>
+          <div class="tech-item"><i class="devicon-git-plain colored" aria-hidden="true"></i>Git</div>
+          <div class="tech-item"><i class="devicon-github-original colored" aria-hidden="true"></i>GitHub</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About <span>Me</span></h2>
+          <p>Technology, creativity and innovation.</p>
+        </div>
+        <div class="about-grid">
+          <div class="initials-card" aria-label="KLS initials logo"><strong>KLS</strong></div>
+          <div class="about-copy">
+            <h3>Creative Thinker. <span>Technology Innovator.</span></h3>
+            <p>
+              My name is Kooli Lodeya Samwel. I am a Computer Scientist passionate
+              about technology, creativity, software development and digital innovation.
+            </p>
+            <p>
+              I bring together technical knowledge and creative skills to design
+              digital solutions, develop websites, create visual identities and
+              produce engaging multimedia content.
+            </p>
+            <p>
+              My ambition is to use technology to solve real-world problems,
+              improve digital experiences and contribute to technological advancement.
+            </p>
+            <div class="details">
+              <div><strong>Name:</strong> Kooli Lodeya Samwel</div>
+              <div><strong>Profession:</strong> Computer Scientist</div>
+              <div><strong>Specialization:</strong> Software Engineering</div>
+              <div><strong>Personal brand:</strong> KLS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <h2>My Technical <span>Skills</span></h2>
+          <p>Core areas of creative and technical expertise.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon">🎨</div>
+            <h3>Graphic Design</h3>
+            <p>Logo design, branding, posters, flyers, illustrations and visual communication.</p>
+            <div class="progress" aria-label="Graphic design proficiency indicator"><span style="width:90%"></span>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-icon">🌐</div>
+            <h3>Web Design</h3>
+            <p>Responsive websites, UI/UX concepts, HTML, CSS, JavaScript and modern interfaces.</p>
+            <div class="progress" aria-label="Web design proficiency indicator"><span style="width:85%"></span></div>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎬</div>
+            <h3>Video Editing</h3>
+            <p>Video production, storytelling, transitions, motion graphics and multimedia content.</p>
+            <div class="progress" aria-label="Video editing proficiency indicator"><span style="width:85%"></span></div>
+          </article>
+          <article class="card">
+            <div class="card-icon">💻</div>
+            <h3>Software Engineering</h3>
+            <p>Programming, software development, system design, testing and problem-solving.</p>
+            <div class="progress" aria-label="Software engineering proficiency indicator"><span
+                style="width:80%"></span></div>
+          </article>
+        </div>
+        <p style="margin-top:15px;color:var(--muted);font-size:.78rem;text-align:center">
+          Skill bars are illustrative placeholders. Adjust them to reflect your actual proficiency.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Professional <span>Services</span></h2>
+          <p>Turning ideas into practical digital solutions.</p>
+        </div>
+        <div class="service-grid">
+          <article class="card service-card">
+            <div class="card-icon">🖌️</div>
+            <h3>Graphic Design</h3>
+            <p>Branding, logos, posters, banners and promotional materials.</p>
+          </article>
+          <article class="card service-card">
+            <div class="card-icon">🖥️</div>
+            <h3>Web Development</h3>
+            <p>Professional websites, landing pages and web applications.</p>
+          </article>
+          <article class="card service-card">
+            <div class="card-icon">🎥</div>
+            <h3>Video Editing</h3>
+            <p>Promotional videos, creative editing and digital media production.</p>
+          </article>
+          <article class="card service-card">
+            <div class="card-icon">⚙️</div>
+            <h3>Software Solutions</h3>
+            <p>Software development, system design and digital problem-solving.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="portfolio">
+      <div class="container">
+        <div class="section-heading">
+          <h2>My Creative <span>Portfolio</span></h2>
+          <p>A visual showcase of technology, design and innovation.</p>
+        </div>
+        <div class="project-grid">
+          <article class="card project-card">
+            <div class="project-image">
+              <img loading="lazy"
+                src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80"
+                alt="Graphic design materials on a creative workspace">
+            </div>
+            <h3>Graphic Design</h3>
+            <p>Brand identities, promotional graphics and creative visual communication.</p>
+          </article>
+          <article class="card project-card">
+            <div class="project-image">
+              <img loading="lazy"
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                alt="Laptop showing a web development workspace">
+            </div>
+            <h3>Web Design &amp; Development</h3>
+            <p>Responsive websites, user interfaces and web application concepts.</p>
+          </article>
+          <article class="card project-card">
+            <div class="project-image">
+              <img loading="lazy"
+                src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=900&q=80"
+                alt="Video production and editing equipment">
+            </div>
+            <h3>Video Editing</h3>
+            <p>Video production, storytelling and multimedia editing.</p>
+          </article>
+          <article class="card project-card">
+            <div class="project-image">
+              <img loading="lazy"
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80"
+                alt="Computer screen displaying source code">
+            </div>
+            <h3>Software Engineering</h3>
+            <p>Programming, application development and software solutions.</p>
+          </article>
+          <article class="card project-card">
+            <div class="project-image">
+              <img loading="lazy"
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80"
+                alt="Technology team collaborating around computers">
+            </div>
+            <h3>Digital Innovation</h3>
+            <p>Technology-driven ideas, collaboration and digital transformation.</p>
+          </article>
+          <article class="card project-card">
+            <div class="project-image">
+              <img loading="lazy"
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+                alt="Computer hardware and electronic components">
+            </div>
+            <h3>Computer Technology</h3>
+            <p>Exploring computer systems, hardware and emerging technologies.</p>
+          </article>
+        </div>
+        <p style="margin-top:18px;color:var(--muted);font-size:.8rem;text-align:center">
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Let's <span>Connect</span></h2>
+          <p>Let's collaborate, innovate and create something meaningful.</p>
+        </div>
+        <div class="contact-panel">
+          <h3>Have a Project in Mind?</h3>
+          <p>
+            I welcome professional collaborations, creative projects,
+            technology partnerships and software development opportunities.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:koolisamwel@gmail.com">✉ Email Me</a>
+            <a href="www.linkedin.com/in/koolisamwel/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/KooliSamwel/kooli/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Kooli Lodeya Samwel. All Rights Reserved.</p>
+    <p>KLS | Innovating Through Technology and Creativity.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
